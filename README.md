@@ -5,11 +5,11 @@
 
 ### How to build & run
 
-It just can be used as a ROS package now! 
+It just can be used as a ROS1 package now. 
 
 ```
 cd ~/catkin_ws/src
-git clone git@github.mit.edu:SPARK/gtsam_4dof.git
+git clone https://github.com/MIT-SPARK/pose4dof.git
 cd ..
 catkin build pose4dof
 ```
