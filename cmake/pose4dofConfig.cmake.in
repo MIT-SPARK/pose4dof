@@ -1,0 +1,14 @@
+@PACKAGE_INIT@
+include(CMakeFindDependencyMacro)
+
+get_filename_component(pose4dof_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+find_dependency(GTSAM REQUIRED)
+find_dependency(Eigen3 REQUIRED)
+
+if(NOT TARGET pose4dof)
+  include("${pose4dof_CMAKE_DIR}/pose4dofTargets.cmake")
+endif()
+
+set(pose4dof_LIBRARIES pose4dof)
+check_required_components(pose4dof)
